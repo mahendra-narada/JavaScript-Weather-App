@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+       
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="text-center my-4">
+        <h1 style="color: white; background-color: rgba(211,159,211,0.3); padding: 15px; border-radius: 25px;">Weather Dashboard</h1>
+    </div>
+    <div class="dashboard">
+        <div class="form-group">
+            <label for="cityInput">Enter a City Name</label>
+            <input type="text" class="form-control"  id="cityInput" placeholder="Enter City Name">
+        </div>
+        <button class="btn btn-primary btn-block" onclick="searchWeather()">Search</button>
+        <p class="text-center">or</p>
+        <button class="btn btn-secondary btn-block" onclick="useCurrentLocation()">Use Current Location</button>
+
+        <div class="weather-info mt-4">
+            <h2 id="location">London (2023-06-20)</h2>
+            <p id="temperature">Temperature: 18.71°C</p>
+            <p id="Wind">Wind: 4.57 M/S</p>
+            <p id="Humidity">Humidity: 93%</p>
+            <img src="https://via.placeholder.com/50" id="weather-icon" alt="Weather Icon">
+            <p id="description"><strong>Light Rain</strong></p>
+        </div>
+
+        <h3 class="text-center">4-Day Forecast</h3>
+        <div class="d-flex justify-content-between">
+            <div class="forecast-card">
+                <h5 id="f1_date">2023-06-21</h5>
+                <p id="f1_temp">Temp: 16.68°C</p>
+                <p id="f1_wind">Wind: 2.8 M/S</p>
+                <p id="f1_humidity">Humidity: 82%</p>
+            </div>
+            <div class="forecast-card">
+                <h5 id="f2_date">2023-06-22</h5>
+                <p id="f2_temp">Temp: 17.26°C</p>
+                <p id="f2_wind">Wind: 1.36 M/S</p>
+                <p id="f2_humidity">Humidity: 75%</p>
+            </div>
+            <div class="forecast-card">
+                <h5 id="f3_date">2023-06-23</h5>
+                <p id="f3_temp">Temp: 18.00°C</p>
+                <p id="f3_wind">Wind: 1.24 M/S</p>
+                <p id="f3_humidity">Humidity: 71%</p>
+            </div>
+            <div class="forecast-card">
+                <h5 id="f4_date">2023-06-24</h5>
+                <p id="f4_temp">Temp: 18.39°C</p>
+                <p id="f4_wind">Wind: 2.12 M/S</p>
+                <p id="f4_humidity">Humidity: 72%</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
