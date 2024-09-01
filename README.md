@@ -3,7 +3,7 @@
 
 This Weather App is a simple web application that allows users to get current weather information and a 4-day forecast for a specified location. Users can search for weather details by entering a city name or by using their current geographical location.
 
-[check out :- ](https://mahendra-narada.github.io/JavaScript-Weather-App/)
+[Visit :- ](https://mahendra-narada.github.io/JavaScript-Weather-App/)
 
 ## Features
 
