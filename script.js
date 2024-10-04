@@ -43,11 +43,11 @@ function fetchWeather(location) {
       document.getElementById("f3_wind").textContent="Wind: "+data.forecast.forecastday[2].day.maxwind_mph+" M/S";
       document.getElementById("f3_humidity").textContent="Humidity: "+data.forecast.forecastday[2].day.avghumidity+"%";
 
-      //forecast day 4
-        const tomorrowDate = new Date(data.forecast.forecastday[2].date);
-        tomorrowDate.setDate(tomorrowDate.getDate() + 1);
-        const formattedTomorrowDate = tomorrowDate.toISOString().slice(0, 10);
-        document.getElementById("f4_date").textContent = formattedTomorrowDate;
+    //   forecast day 4
+    const tomorrowDate = new Date(data.forecast.forecastday[2].date);
+    tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+    const formattedTomorrowDate = tomorrowDate.toISOString().slice(0, 10);
+    document.getElementById("f4_date").textContent = formattedTomorrowDate;
     })
     .catch(error => {
       console.error("Error:", error);
@@ -56,15 +56,17 @@ function fetchWeather(location) {
 }
 
 
-
 //Current Location Function
 function useCurrentLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
+            
+            
             const location = `${latitude},${longitude}`;
             fetchWeather(location);
+            
         }, showError);
     } else {
         alert("Geolocation is not supported by this browser.");
