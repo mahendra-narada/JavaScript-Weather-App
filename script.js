@@ -44,10 +44,10 @@ function fetchWeather(location) {
       document.getElementById("f3_humidity").textContent="Humidity: "+data.forecast.forecastday[2].day.avghumidity+"%";
 
       //forecast day 4
-      document.getElementById("f4_date").textContent=data.forecast.forecastday[3].date;
-      document.getElementById("f4_temp").textContent="Temp: "+data.forecast.forecastday[3].day.avgtemp_c+"°C";
-      document.getElementById("f4_wind").textContent="Wind: "+data.forecast.forecastday[3].day.maxwind_mph+" M/S";
-      document.getElementById("f4_humidity").textContent="Humidity: "+data.forecast.forecastday[3].day.avghumidity+"%";
+        const tomorrowDate = new Date(data.forecast.forecastday[2].date);
+        tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+        const formattedTomorrowDate = tomorrowDate.toISOString().slice(0, 10);
+        document.getElementById("f4_date").textContent = formattedTomorrowDate;
     })
     .catch(error => {
       console.error("Error:", error);
